@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Housing agency:jar">
+    <output-path>$PROJECT_DIR$/../Housing_agency_jar</output-path>
+    <root id="archive" name="Housing agency.jar">
+      <element id="module-output" name="HousingAgency" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar/miglayout15-swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar/jgoodies-common-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar/jgoodies-forms-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar/substance-5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar/sqljdbc42.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
