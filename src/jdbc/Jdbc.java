@@ -9,9 +9,9 @@ import java.sql.SQLException;
  */
 public class Jdbc {
     private static final String dir = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private static final String URL = "jdbc:sqlserver://47.94.86.203:1433;DatabaseName=HousingAgency";
-    private static final String user = "sa";
-    private static final String password = "Keshe001";
+    private static final String URL = "jdbc:sqlserver://;DatabaseName=";//数据库地址
+    private static final String user = "";
+    private static final String password = "";
     public static Connection conn = null;
 
     public Connection getConnection() {
