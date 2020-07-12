@@ -14,25 +14,21 @@
 
 　本设计采用的操作系统是Windows 10，采用的开发语言是Java，其运行环境为 jdk1.8.0。选用 SQL Server 建立并管理数据库，通过JDBC接口来实现对数据库的访问，使用Java Swing库进行界面设计。设计时所选择的开发环境是Eclipse，这是一个全功能的开放源码Java IDE，可以帮助开发人员编写、编译、 调试和部署Java应用。
 
-#### 2 数据库的实施页码
+#### 2 数据库的实施
 
   定义数据对象的 SQL 语句分别如下：
 
-`
-
+```sql
 --创建数据库
-
 create database HousingAgency
     collate Chinese_PRC_CI_AS
 go
 
 --切换数据库
-
 USE HousingAgency
 GO
 
 --职工表
-
 CREATE TABLE Admin
     (
         A_id       varchar(10) NOT NULL
@@ -48,7 +44,6 @@ CREATE TABLE Admin
 GO
 
 --买家表
-
 CREATE TABLE Buyer
     (
         B_no       varchar(10) NOT NULL
@@ -66,7 +61,6 @@ CREATE TABLE Buyer
 GO
 
 --卖家表
-
 CREATE TABLE Seller
     (
         S_no       varchar(10) NOT NULL
@@ -84,7 +78,6 @@ CREATE TABLE Seller
 GO
 
 --房源信息表
-
 CREATE TABLE Houseinfo
     (
         H_no      varchar(10) NOT NULL
@@ -117,7 +110,6 @@ CREATE TABLE Houseinfo
 GO
 
 --求租表
-
 CREATE TABLE Rent
     (
         R_no    varchar(10)  NOT NULL
@@ -159,7 +151,6 @@ CREATE TABLE B_order
 GO
 
 --合同表
-
 CREATE TABLE contract
     (
         order_no  int         NOT NULL
@@ -181,12 +172,11 @@ CREATE TABLE contract
 GO
 
 --交易视图
-
 CREATE VIEW Deal
 AS SELECT order_no,B_no,B_order.S_no,Houseinfo.H_no,price,money,order_stu
 FROM B_order,Houseinfo
 WHERE Houseinfo.H_no=B_order.H_no AND B_order.S_no=Houseinfo.S_no
 
 GO
+```
 
-`
